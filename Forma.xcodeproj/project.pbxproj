@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E8C53477708EE5B55452716 /* FormaWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 03062A581911292C26D116C4 /* FormaWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE46F4771387DC5EFD81E8EF /* FormaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4C7058DD7A3B1803089DAA63 /* FormaKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4DFF18D3962F1D899E103EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58B06F778EBE8670AC2B80C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9659AF8A4CF1A620A47A9D0F;
+			remoteInfo = FormaWidgetsExtension;
+		};
+		22776ACB58708C18F1F76FE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58B06F778EBE8670AC2B80C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2EED490941D2240B106E557;
+			remoteInfo = Forma;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2FAF5A42C2A02820408E7CE1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6E8C53477708EE5B55452716 /* FormaWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD0165DFF6C94D69CBBBA9E8 /* Forma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03062A581911292C26D116C4 /* FormaWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FormaWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A1C4B8BD3F9E2BF22856D7 /* FormaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DAFC5250F0377154AD36BA /* Forma-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Forma-Info.plist"; sourceTree = "<group>"; };
+		4630BDE258529A9F5492DB0E /* FormaWidgets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormaWidgets-Info.plist"; sourceTree = "<group>"; };
+		D7EFF7CB9A13623C941FF1E3 /* Forma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Forma.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		23C1AAB351B3B8CD38409CC2 /* Forma */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Forma;
+			sourceTree = "<group>";
+		};
+		604DA4E63E470D5F42D8A893 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4934B835238E10A24FF12019 /* FormaWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FormaWidgets;
+			sourceTree = "<group>";
+		};
+		92B20D0FB337DA9E33DCFF74 /* FormaTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FormaTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		348195789140F0F9DAE30E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE46F4771387DC5EFD81E8EF /* FormaKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DA7C94196C33118F7D02178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FB7F81E7B7955795AB31B6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2494D20E5620E3FF3C825F56 = {
+			isa = PBXGroup;
+			children = (
+				23C1AAB351B3B8CD38409CC2 /* Forma */,
+				604DA4E63E470D5F42D8A893 /* Shared */,
+				4934B835238E10A24FF12019 /* FormaWidgets */,
+				92B20D0FB337DA9E33DCFF74 /* FormaTests */,
+				3F2A4954B46B48735B3D999A /* Config */,
+				D8AE40B8EDC577208594B735 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F2A4954B46B48735B3D999A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D7EFF7CB9A13623C941FF1E3 /* Forma.entitlements */,
+				57DAFC5250F0377154AD36BA /* Forma-Info.plist */,
+				4630BDE258529A9F5492DB0E /* FormaWidgets-Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D8AE40B8EDC577208594B735 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD0165DFF6C94D69CBBBA9E8 /* Forma.app */,
+				03062A581911292C26D116C4 /* FormaWidgetsExtension.appex */,
+				00A1C4B8BD3F9E2BF22856D7 /* FormaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2EED490941D2240B106E557 /* Forma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86390F0561735C38A8891970 /* Build configuration list for PBXNativeTarget "Forma" */;
+			buildPhases = (
+				2A02D6DC83DBA2DE0F981A1F /* Sources */,
+				348195789140F0F9DAE30E0F /* Frameworks */,
+				7F522A11E96DCD2BD98745C1 /* Resources */,
+				2FAF5A42C2A02820408E7CE1 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54D29798D07F9F7D5B10F5BE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				23C1AAB351B3B8CD38409CC2 /* Forma */,
+				604DA4E63E470D5F42D8A893 /* Shared */,
+			);
+			name = Forma;
+			packageProductDependencies = (
+				4C7058DD7A3B1803089DAA63 /* FormaKit */,
+			);
+			productName = Forma;
+			productReference = FD0165DFF6C94D69CBBBA9E8 /* Forma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9659AF8A4CF1A620A47A9D0F /* FormaWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EEF639344C99186BA71A780 /* Build configuration list for PBXNativeTarget "FormaWidgetsExtension" */;
+			buildPhases = (
+				D296CE06E6DB5BC2E092BD3B /* Sources */,
+				0DA7C94196C33118F7D02178 /* Frameworks */,
+				EE07C7984AC510D0BA307B22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4934B835238E10A24FF12019 /* FormaWidgets */,
+				604DA4E63E470D5F42D8A893 /* Shared */,
+			);
+			name = FormaWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = FormaWidgetsExtension;
+			productReference = 03062A581911292C26D116C4 /* FormaWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		808D771D5EAFB35FDE0AAA31 /* FormaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCDBEC4E428EF8243C77B9E /* Build configuration list for PBXNativeTarget "FormaTests" */;
+			buildPhases = (
+				0E270A20B482D62744212A9A /* Sources */,
+				1FB7F81E7B7955795AB31B6C /* Frameworks */,
+				C1CE1B6C6E6E418F1CC45E77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				295627556DFA5A5940602D1F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				92B20D0FB337DA9E33DCFF74 /* FormaTests */,
+			);
+			name = FormaTests;
+			packageProductDependencies = (
+			);
+			productName = FormaTests;
+			productReference = 00A1C4B8BD3F9E2BF22856D7 /* FormaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58B06F778EBE8670AC2B80C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					B2EED490941D2240B106E557 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					9659AF8A4CF1A620A47A9D0F = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					808D771D5EAFB35FDE0AAA31 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = B2EED490941D2240B106E557;
+					};
+				};
+			};
+			buildConfigurationList = 0E42324E201CE7160D980868 /* Build configuration list for PBXProject "Forma" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2494D20E5620E3FF3C825F56;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C77E71668B2D3BFB934F6DEC /* XCLocalSwiftPackageReference "FormaKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D8AE40B8EDC577208594B735 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2EED490941D2240B106E557 /* Forma */,
+				9659AF8A4CF1A620A47A9D0F /* FormaWidgetsExtension */,
+				808D771D5EAFB35FDE0AAA31 /* FormaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F522A11E96DCD2BD98745C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE07C7984AC510D0BA307B22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1CE1B6C6E6E418F1CC45E77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A02D6DC83DBA2DE0F981A1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D296CE06E6DB5BC2E092BD3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E270A20B482D62744212A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54D29798D07F9F7D5B10F5BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9659AF8A4CF1A620A47A9D0F /* FormaWidgetsExtension */;
+			targetProxy = B4DFF18D3962F1D899E103EE /* PBXContainerItemProxy */;
+		};
+		295627556DFA5A5940602D1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2EED490941D2240B106E557 /* Forma */;
+			targetProxy = 22776ACB58708C18F1F76FE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E1F4C6C1D05EB1CD6DF1DECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4A1824C64F79E7D1D50F8B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D1F779B1418710270B7803D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/Forma.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Forma-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Forma;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.forma.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		566F376B2483A43F9646CFD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/Forma.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/Forma-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Forma;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.forma.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FA7DEE364C940EDAF33FCAAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/FormaWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Forma;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.forma.app.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		14885202D3FD80718C54DD81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/FormaWidgets-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Forma;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.forma.app.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		47FE32FD813C74A94F60B351 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.forma.app.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Forma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Forma";
+			};
+			name = Debug;
+		};
+		F2B88837BFE730E2D1CDA9CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.forma.app.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Forma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Forma";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E42324E201CE7160D980868 /* Build configuration list for PBXProject "Forma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1F4C6C1D05EB1CD6DF1DECE /* Debug */,
+				4A1824C64F79E7D1D50F8B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86390F0561735C38A8891970 /* Build configuration list for PBXNativeTarget "Forma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D1F779B1418710270B7803D /* Debug */,
+				566F376B2483A43F9646CFD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EEF639344C99186BA71A780 /* Build configuration list for PBXNativeTarget "FormaWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7DEE364C940EDAF33FCAAA /* Debug */,
+				14885202D3FD80718C54DD81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBCDBEC4E428EF8243C77B9E /* Build configuration list for PBXNativeTarget "FormaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47FE32FD813C74A94F60B351 /* Debug */,
+				F2B88837BFE730E2D1CDA9CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C77E71668B2D3BFB934F6DEC /* XCLocalSwiftPackageReference "FormaKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = FormaKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C7058DD7A3B1803089DAA63 /* FormaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C77E71668B2D3BFB934F6DEC /* XCLocalSwiftPackageReference "FormaKit" */;
+			productName = FormaKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 58B06F778EBE8670AC2B80C1 /* Project object */;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>forma</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Forma reads your body weight and daily step count so weigh-ins from your scale and steps from your iPhone and Apple Watch appear alongside what you log.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>If you choose, Forma saves the weigh-ins and strength workouts you log in Forma to Apple Health.</string>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
+</dict>
+</plist>
