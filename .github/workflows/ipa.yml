@@ -1,0 +1,84 @@
+name: Sideload IPA
+
+# Builds a device IPA that is ad-hoc signed (no Apple certificate). Install it
+# with a re-signing tool such as Sideloadly, AltStore or SideStore, which signs
+# it with your own Apple ID at install time.
+
+on:
+  push:
+    branches: ["claude/forma-ios-app"]
+  workflow_dispatch:
+
+concurrency:
+  group: ipa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ipa:
+    name: Build sideload IPA
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select newest stable Xcode
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_*.app | grep -v -i beta | sort -V | tail -1)
+          echo "Using $XCODE"
+          sudo xcode-select -s "$XCODE"
+          xcodebuild -version
+
+      - name: Archive for iPhone (unsigned)
+        run: |
+          set -o pipefail
+          xcodebuild archive \
+            -project Forma.xcodeproj \
+            -scheme Forma \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/Forma.xcarchive \
+            CURRENT_PROJECT_VERSION=${{ github.run_number }} \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            -quiet
+
+      - name: Package IPA
+        run: |
+          set -euo pipefail
+          APP=build/Forma.xcarchive/Products/Applications/Forma.app
+          test -d "$APP"
+          rm -rf Payload && mkdir Payload && cp -R "$APP" Payload/
+          test -d Payload/Forma.app/PlugIns/FormaWidgetsExtension.appex
+
+          # Ad-hoc sign nested code first, then the app with its entitlements, so
+          # re-signing tools can see which capabilities (HealthKit) the app uses.
+          find -d Payload/Forma.app \( -name "*.appex" -o -name "*.framework" -o -name "*.dylib" \) -print0 |
+            while IFS= read -r -d '' item; do codesign --force --sign - --timestamp=none "$item"; done
+          codesign --force --sign - --timestamp=none --entitlements Config/Forma.entitlements Payload/Forma.app
+          codesign --verify --deep --strict Payload/Forma.app
+          codesign -d --entitlements - Payload/Forma.app
+
+          VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" Payload/Forma.app/Info.plist)
+          BUILD=$(/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" Payload/Forma.app/Info.plist)
+          MIN_OS=$(/usr/libexec/PlistBuddy -c "Print :MinimumOSVersion" Payload/Forma.app/Info.plist)
+          lipo -info Payload/Forma.app/Forma
+          NAME="Forma-${VERSION}-${BUILD}.ipa"
+          zip -qry "$NAME" Payload
+          echo "Built $NAME (bundle $(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' Payload/Forma.app/Info.plist), iOS $MIN_OS+)"
+          ls -lh "$NAME"
+          {
+            echo "### Forma sideload IPA"
+            echo ""
+            echo "- File: \`$NAME\` ($(du -h "$NAME" | cut -f1))"
+            echo "- Version $VERSION ($BUILD), requires iOS $MIN_OS or later"
+            echo "- Ad-hoc signed; install with Sideloadly, AltStore or SideStore using your Apple ID."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Forma-ipa
+          path: "*.ipa"
+          if-no-files-found: error
+          retention-days: 30

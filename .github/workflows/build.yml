@@ -76,6 +76,20 @@ jobs:
             -resultBundlePath TestResults.xcresult \
             CODE_SIGNING_ALLOWED=NO \
             -quiet
+      - name: Test summary
+        if: always()
+        run: |
+          [ -d TestResults.xcresult ] || exit 0
+          xcrun xcresulttool get test-results summary --path TestResults.xcresult --compact > summary.json || { echo "Could not read test summary"; exit 0; }
+          python3 - <<'PY'
+          import json, os
+          s = json.load(open("summary.json"))
+          line = "Tests: %s passed, %s failed, %s skipped (%s)" % (
+              s.get("passedTests", 0), s.get("failedTests", 0), s.get("skippedTests", 0), s.get("result"))
+          print(line)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+              f.write(line + "\n")
+          PY
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
