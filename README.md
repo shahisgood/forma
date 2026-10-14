@@ -32,6 +32,19 @@ The idea: **make daily tracking effortless, then turn it into progress you can a
 
 Everything except HealthKit data and Live Activities can be exercised in the Simulator. HealthKit works in the Simulator with data you add in its Health app; Live Activities and the Dynamic Island need an iPhone 14 Pro or later (or the matching simulator) for the island layouts.
 
+### Sideloading without Xcode
+
+Every push builds an IPA in the **Sideload IPA** workflow (Actions tab → latest run → *Artifacts* → `Forma-ipa`; you need to be signed in to GitHub to download it). It's compiled for iPhone and ad-hoc signed with the app's entitlements, but it is **not** signed with an Apple certificate, so it has to be installed with a tool that re-signs it with your Apple ID:
+
+- [Sideloadly](https://sideloadly.io) (Windows/macOS): connect the iPhone, drop in the `.ipa`, enter your Apple ID.
+- [AltStore](https://altstore.io) or SideStore: add the `.ipa` from the Files app.
+
+Requirements and caveats:
+- iOS 17 or later. Turn on **Developer Mode** (Settings → Privacy & Security → Developer Mode) and, with Sideloadly, trust your Apple ID under Settings → General → VPN & Device Management.
+- With a free Apple ID the app expires after 7 days (re-install or let AltStore refresh it; your data is kept as long as the app isn't deleted) and counts toward the 3-app limit. The Live Activity extension uses one extra App ID.
+- Live Activities and notifications don't need special entitlements and work when sideloaded. **Apple Health** needs the HealthKit entitlement; whether your Apple ID and tool grant it varies. If it isn't granted, "Connect Apple Health" shows an error and everything else (manual weight, steps, food, training) still works.
+- With a paid developer account, building and running from Xcode (above) is simpler and doesn't expire after 7 days.
+
 ### Capabilities & configuration (already in the repo)
 
 | Item | Where |
