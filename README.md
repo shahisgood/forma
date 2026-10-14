@@ -171,11 +171,9 @@ cd FormaKit && swift test
 
 In Xcode, **Product → Test** on the Forma scheme runs `FormaTests`: SwiftData persistence (edit/delete, unit storage, nutrition totals after edits, independent duplicates, saved meals, dated targets, routine toggles, idempotent seeding) and workout behaviour (template edits don't rewrite sessions, suggestions only applied on completion, finish drops unchecked sets, restore after relaunch, discard, history edits feed progression, repeat workout). Run the package tests from the FormaKit scheme or the command line.
 
-**What was and wasn't verified while building this.** It was developed in a Linux environment without Xcode or an iOS SDK:
-- `swift test` for FormaKit: **70/70 passing**.
-- The whole app, widget extension and `FormaTests` were type-checked with the Swift 6.2 compiler against hand-written stub modules of the Apple frameworks (real `Observation` and Foundation `#Predicate`/`SortDescriptor`; stubbed SwiftUI, SwiftData, Charts, HealthKit, ActivityKit, WidgetKit, AppIntents, UserNotifications, UIKit). That catches errors in Forma's own code but can't prove exact Apple API signatures.
-- The Xcode project file was generated and structurally validated, not opened in Xcode.
-- **Not run:** an Xcode build, `FormaTests`, the app in a simulator or on a device, HealthKit, Live Activities, notifications. Expect to fix small SDK-signature issues on the first Xcode build.
+**Continuous integration.** `.github/workflows/build.yml` runs on every push: FormaKit `swift test`, an `xcodebuild` build of the app and widget extension for the iOS Simulator, and `FormaTests` on a simulator, using the newest stable Xcode on the GitHub macOS runner. The first runs (Xcode 26, iOS 26.5 simulator) passed: 70/70 package tests and 15/15 app tests. `.github/workflows/ipa.yml` produces the sideload IPA.
+
+**Not yet verified:** running on a physical iPhone, and real HealthKit data, Live Activities and notification delivery. These need a device and are worth checking by hand.
 
 ---
 
